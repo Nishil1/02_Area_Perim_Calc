@@ -4,6 +4,7 @@ def num_check(question):
 	valid = False
 	while not valid:
 		error = "Please enter value more than 0\n"
+		
 		try:
 			# ask user to enter a number
 
@@ -19,23 +20,31 @@ def num_check(question):
 			else:
 				print(error)
 		except ValueError: 
-			print(error)
+			print("Please enter a number")
+
+
+			
 	
 
+print("***Area Perimeter Calculator***")
 
+keep_going = ""
+while keep_going == "":
 
+	width = num_check("Width:")
+	height = num_check("height:")
+	print()
+	print("width",width)
+	print("height",height)
+	print()
+	area = width*height 
+	perimeter = 2*(width + height)
+	print("Perimeter: {:.2f} units".format (perimeter))
+	print("area: {:.2f} square units".format (area))                         
 
+	keep_going = input("Press <enter> to keep going or any key to quit")
 
+print("Thank you for using the area / perimeter calculator\n")
 
-width = num_check("Width:")
-height = num_check("height:")
-print()
-print("width",width)
-print("height",height)
-print()
-area = width*height 
-perimeter = 2*(width + height)
-print("Perimeter:", perimeter, "units")
-print("area:", area, "square units")
 
 
