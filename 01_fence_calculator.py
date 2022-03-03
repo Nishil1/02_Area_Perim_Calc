@@ -1,12 +1,21 @@
 print("****Fence Cost Caculator****")
 while True :
-    width = float(input("Width: "))
-    lenght = float(input ("Lenght: "))
-    Price = float(input("Price per meter: \n$" ))
-    
-    
 
-    print("-----------------------------------------")
+    try:
+
+        width = float(input("Width: "))
+        lenght = float(input ("Lenght: "))
+        Price = float(input("Price per meter: \n$" ))
+    
+    except:
+        if ValueError:
+            print("Please enter a valid number")
+            continue 
+
+           
+
+
+        print("-----------------------------------------")
 
     perimeter = 2*(width + lenght)
     cost_fencing = perimeter * Price
