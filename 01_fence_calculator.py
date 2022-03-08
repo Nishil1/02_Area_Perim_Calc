@@ -24,7 +24,7 @@ print("****Fence Cost Caculator****")
 while True :
 
     width = num_check("Width:")
-    lenght =num_check("Lenght: ")
+    lenght =num_check("Length: ")
     Price = num_check("Price per meter: \n$" )
 
     print("-----------------------------------------")
